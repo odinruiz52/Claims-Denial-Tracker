@@ -1,0 +1,700 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='denials_by_payer' inline='true' name='federated.10uo5db0mcx7cd1e6ruwc1wzkm7f' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='denials_by_payer' name='textscan.0mdevls0bkosmy10tc69k0smlzld'>
+            <connection class='textscan' directory='C:/Users/odinr/Desktop/Projects/Claims-Denial-Tracker/data' filename='denials_by_payer.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0mdevls0bkosmy10tc69k0smlzld' name='denials_by_payer.csv' table='[denials_by_payer#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='PAYER' ordinal='0' />
+            <column datatype='integer' name='TOTALDENIALS' ordinal='1' />
+            <column datatype='integer' name='TOTALDENIED' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[denials_by_payer.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAYER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PAYER]</local-name>
+            <parent-name>[denials_by_payer.csv]</parent-name>
+            <remote-alias>PAYER</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[denials_by_payer.csv_7606A427A74E4015A981928029E36407]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTALDENIALS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TOTALDENIALS]</local-name>
+            <parent-name>[denials_by_payer.csv]</parent-name>
+            <remote-alias>TOTALDENIALS</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[denials_by_payer.csv_7606A427A74E4015A981928029E36407]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTALDENIED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TOTALDENIED]</local-name>
+            <parent-name>[denials_by_payer.csv]</parent-name>
+            <remote-alias>TOTALDENIED</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[denials_by_payer.csv_7606A427A74E4015A981928029E36407]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Payer' datatype='string' name='[PAYER]' role='dimension' type='nominal' />
+      <column caption='Totaldenials' datatype='integer' name='[TOTALDENIALS]' role='measure' type='quantitative' />
+      <column caption='Totaldenied' datatype='integer' name='[TOTALDENIED]' role='measure' type='quantitative' />
+      <column caption='denials_by_payer.csv' datatype='table' name='[__tableau_internal_object_id__].[denials_by_payer.csv_7606A427A74E4015A981928029E36407]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/odinr/AppData/Local/Temp/TableauTemp/#TableauTemp_15se5ek0sxj3yx1053dlg0uy7364.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/01/2025 11:21:44 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>PAYER</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PAYER]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PAYER</remote-alias>
+              <ordinal>0</ordinal>
+              <family>denials_by_payer.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[denials_by_payer.csv_7606A427A74E4015A981928029E36407]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TOTALDENIALS</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TOTALDENIALS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TOTALDENIALS</remote-alias>
+              <ordinal>1</ordinal>
+              <family>denials_by_payer.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[denials_by_payer.csv_7606A427A74E4015A981928029E36407]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TOTALDENIED</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TOTALDENIED]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TOTALDENIED</remote-alias>
+              <ordinal>2</ordinal>
+              <family>denials_by_payer.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[denials_by_payer.csv_7606A427A74E4015A981928029E36407]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='denials_by_payer.csv' id='denials_by_payer.csv_7606A427A74E4015A981928029E36407'>
+            <properties context=''>
+              <relation connection='textscan.0mdevls0bkosmy10tc69k0smlzld' name='denials_by_payer.csv' table='[denials_by_payer#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='PAYER' ordinal='0' />
+                  <column datatype='integer' name='TOTALDENIALS' ordinal='1' />
+                  <column datatype='integer' name='TOTALDENIED' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='avg_resolution_by_reason' inline='true' name='federated.01bcjp60b0bkjz10i1h1z0tlxbpy' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='avg_resolution_by_reason' name='textscan.1mdul2c03mbzf21bxa35u0cw4vns'>
+            <connection class='textscan' directory='C:/Users/odinr/Desktop/Projects/Claims-Denial-Tracker/data' filename='avg_resolution_by_reason.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1mdul2c03mbzf21bxa35u0cw4vns' name='avg_resolution_by_reason.csv' table='[avg_resolution_by_reason#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='DENIALREASON' ordinal='0' />
+            <column datatype='integer' name='AVGDAYS' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[avg_resolution_by_reason.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DENIALREASON</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DENIALREASON]</local-name>
+            <parent-name>[avg_resolution_by_reason.csv]</parent-name>
+            <remote-alias>DENIALREASON</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[avg_resolution_by_reason.csv_83051EEAB71D44358968E7D2A471355D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVGDAYS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AVGDAYS]</local-name>
+            <parent-name>[avg_resolution_by_reason.csv]</parent-name>
+            <remote-alias>AVGDAYS</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[avg_resolution_by_reason.csv_83051EEAB71D44358968E7D2A471355D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avgdays' datatype='integer' name='[AVGDAYS]' role='measure' type='quantitative' />
+      <column caption='Denialreason' datatype='string' name='[DENIALREASON]' role='dimension' type='nominal' />
+      <column caption='avg_resolution_by_reason.csv' datatype='table' name='[__tableau_internal_object_id__].[avg_resolution_by_reason.csv_83051EEAB71D44358968E7D2A471355D]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/odinr/AppData/Local/Temp/TableauTemp/#TableauTemp_0imtpb11jg46zb14prijy06qg6dr.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/01/2025 11:27:44 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>DENIALREASON</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DENIALREASON]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DENIALREASON</remote-alias>
+              <ordinal>0</ordinal>
+              <family>avg_resolution_by_reason.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[avg_resolution_by_reason.csv_83051EEAB71D44358968E7D2A471355D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AVGDAYS</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AVGDAYS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AVGDAYS</remote-alias>
+              <ordinal>1</ordinal>
+              <family>avg_resolution_by_reason.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[avg_resolution_by_reason.csv_83051EEAB71D44358968E7D2A471355D]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='avg_resolution_by_reason.csv' id='avg_resolution_by_reason.csv_83051EEAB71D44358968E7D2A471355D'>
+            <properties context=''>
+              <relation connection='textscan.1mdul2c03mbzf21bxa35u0cw4vns' name='avg_resolution_by_reason.csv' table='[avg_resolution_by_reason#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='DENIALREASON' ordinal='0' />
+                  <column datatype='integer' name='AVGDAYS' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='top_denial_reasons' inline='true' name='federated.0m29fmg019tgrw10z8rdf1qdcqd5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='top_denial_reasons' name='textscan.0c3yeaq1skyq3a1gm781w0vgn45e'>
+            <connection class='textscan' directory='C:/Users/odinr/Desktop/Projects/Claims-Denial-Tracker/data' filename='top_denial_reasons.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0c3yeaq1skyq3a1gm781w0vgn45e' name='top_denial_reasons.csv' table='[top_denial_reasons#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='DENIALREASON' ordinal='0' />
+            <column datatype='integer' name='COUNT' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[top_denial_reasons.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DENIALREASON</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DENIALREASON]</local-name>
+            <parent-name>[top_denial_reasons.csv]</parent-name>
+            <remote-alias>DENIALREASON</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[top_denial_reasons.csv_112A2C849E274195AAC9CED9CD1E7BBC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNT</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[COUNT]</local-name>
+            <parent-name>[top_denial_reasons.csv]</parent-name>
+            <remote-alias>COUNT</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_denial_reasons.csv_112A2C849E274195AAC9CED9CD1E7BBC]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Count' datatype='integer' name='[COUNT]' role='measure' type='quantitative' />
+      <column caption='Denialreason' datatype='string' name='[DENIALREASON]' role='dimension' type='nominal' />
+      <column caption='top_denial_reasons.csv' datatype='table' name='[__tableau_internal_object_id__].[top_denial_reasons.csv_112A2C849E274195AAC9CED9CD1E7BBC]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/odinr/AppData/Local/Temp/TableauTemp/#TableauTemp_1tgtp410205lcr10fnc5m1i71weg.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/01/2025 11:29:23 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>DENIALREASON</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DENIALREASON]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DENIALREASON</remote-alias>
+              <ordinal>0</ordinal>
+              <family>top_denial_reasons.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[top_denial_reasons.csv_112A2C849E274195AAC9CED9CD1E7BBC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>COUNT</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[COUNT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>COUNT</remote-alias>
+              <ordinal>1</ordinal>
+              <family>top_denial_reasons.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_denial_reasons.csv_112A2C849E274195AAC9CED9CD1E7BBC]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='top_denial_reasons.csv' id='top_denial_reasons.csv_112A2C849E274195AAC9CED9CD1E7BBC'>
+            <properties context=''>
+              <relation connection='textscan.0c3yeaq1skyq3a1gm781w0vgn45e' name='top_denial_reasons.csv' table='[top_denial_reasons#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='DENIALREASON' ordinal='0' />
+                  <column datatype='integer' name='COUNT' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Denied by Payer</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='denials_by_payer' name='federated.10uo5db0mcx7cd1e6ruwc1wzkm7f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.10uo5db0mcx7cd1e6ruwc1wzkm7f'>
+            <column caption='Payer' datatype='string' name='[PAYER]' role='dimension' type='nominal' />
+            <column caption='Totaldenied' datatype='integer' name='[TOTALDENIED]' role='measure' type='quantitative' />
+            <column-instance column='[PAYER]' derivation='None' name='[none:PAYER:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TOTALDENIED]' derivation='Sum' name='[sum:TOTALDENIED:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.10uo5db0mcx7cd1e6ruwc1wzkm7f].[sum:TOTALDENIED:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.10uo5db0mcx7cd1e6ruwc1wzkm7f].[none:PAYER:nk]</rows>
+        <cols>[federated.10uo5db0mcx7cd1e6ruwc1wzkm7f].[sum:TOTALDENIED:qk]</cols>
+      </table>
+      <simple-id uuid='{1D583AD1-ECF7-4155-A636-5FD21FA62634}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Resolution Time</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='avg_resolution_by_reason' name='federated.01bcjp60b0bkjz10i1h1z0tlxbpy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.01bcjp60b0bkjz10i1h1z0tlxbpy'>
+            <column caption='Avgdays' datatype='integer' name='[AVGDAYS]' role='measure' type='quantitative' />
+            <column caption='Denialreason' datatype='string' name='[DENIALREASON]' role='dimension' type='nominal' />
+            <column-instance column='[DENIALREASON]' derivation='None' name='[none:DENIALREASON:nk]' pivot='key' type='nominal' />
+            <column-instance column='[AVGDAYS]' derivation='Sum' name='[sum:AVGDAYS:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.01bcjp60b0bkjz10i1h1z0tlxbpy].[none:DENIALREASON:nk]</rows>
+        <cols>[federated.01bcjp60b0bkjz10i1h1z0tlxbpy].[sum:AVGDAYS:qk]</cols>
+      </table>
+      <simple-id uuid='{0629A656-B82D-4A36-8387-C1BEB312F572}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 5 Denial Reasons</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='top_denial_reasons' name='federated.0m29fmg019tgrw10z8rdf1qdcqd5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0m29fmg019tgrw10z8rdf1qdcqd5'>
+            <column caption='Count' datatype='integer' name='[COUNT]' role='measure' type='quantitative' />
+            <column caption='Denialreason' datatype='string' name='[DENIALREASON]' role='dimension' type='nominal' />
+            <column-instance column='[DENIALREASON]' derivation='None' name='[none:DENIALREASON:nk]' pivot='key' type='nominal' />
+            <column-instance column='[COUNT]' derivation='Sum' name='[sum:COUNT:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0m29fmg019tgrw10z8rdf1qdcqd5].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.0m29fmg019tgrw10z8rdf1qdcqd5].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0m29fmg019tgrw10z8rdf1qdcqd5].[none:DENIALREASON:nk]</rows>
+        <cols>[federated.0m29fmg019tgrw10z8rdf1qdcqd5].[sum:COUNT:qk]</cols>
+      </table>
+      <simple-id uuid='{3E3D62AE-348A-45EF-8FA1-0FBD75937505}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='33954' id='3' name='Sheet 1' w='97538' x='1231' y='930'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='32442' id='5' name='Sheet 3' w='97538' x='1231' y='66628'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='31744' id='6' name='Sheet 2' w='97538' x='1231' y='34884'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='850' minheight='850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='8' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98140' id='7' param='vert' type-v2='layout-flow' w='97538' x='1231' y='930'>
+                <zone fixed-size='280' h='33954' id='3' is-fixed='true' name='Sheet 1' w='97538' x='1231' y='930'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='265' h='31744' id='6' is-fixed='true' name='Sheet 2' w='97538' x='1231' y='34884'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='271' h='32442' id='5' is-fixed='true' name='Sheet 3' w='97538' x='1231' y='66628'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{40DC626F-9698-443C-884C-34937C455188}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='89'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{45513BED-5064-4F67-941D-9C368A3E9F7A}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3703722D-44CB-4ED8-A583-2605BFD0A499}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BCDFCD7D-FC2F-4EF0-912B-F37011F9686C}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1' />
+        <viewpoint name='Sheet 2' />
+        <viewpoint name='Sheet 3' />
+      </viewpoints>
+      <active id='-1' />
+      <device-preview visible='true' />
+      <simple-id uuid='{C3874CAE-A45A-4531-8698-D5E85597F7AA}' />
+    </window>
+  </windows>
+</workbook>
