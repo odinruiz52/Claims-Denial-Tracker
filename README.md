@@ -23,3 +23,15 @@ A healthcare-focused data project that tracks and analyzes insurance claim denia
 | 10002   | United    | Prior Auth Required| Denied | 750    | 750    | Appealed   |
 
 ## 📁 Folder Structure
+
+Claims-Denial-Tracker/
+├── assets/ # Dashboard Screenshot (.png) file
+├── data/ # Sample CSV data
+├── sql/ # SQL scripts (table + queries)
+├── tableau/ # Dashboard (.twb) file
+├── README.md # Project overview
+├── LICENSE
+
+## 📸 Dashboard Preview
+
+![Claims Denial Dashboard](assets/dashboard_screenshot.png)
