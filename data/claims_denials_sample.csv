@@ -1,0 +1,6 @@
+ClaimID,Payer,DenialReason,Status,ServiceDate,BilledAmount,DeniedAmount,DaysToResolve,Resolution,Provider
+10001,Aetna,Missing Modifier,Denied,2024-11-03,500,500,10,Paid,Dr. Smith
+10002,United,Prior Auth Required,Denied,2024-11-10,750,750,14,Appealed,Dr. Lin
+10003,Medicare,Incorrect Code,Denied,2024-11-12,1200,0,5,Corrected,Dr. Khan
+10004,Cigna,Expired Eligibility,Denied,2024-11-15,300,300,7,Unresolved,Dr. Patel
+10005,Blue Cross,Non-covered Service,Denied,2024-11-18,400,400,3,Adjusted,Dr. Lee
